@@ -2,12 +2,14 @@ package com.example.todolist
 
 import TaskAdapter
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.tasks.Task
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -45,6 +47,17 @@ class TaskListActivity : AppCompatActivity() {
 //                    }
 //                }
 //                taskAdapter.submitList(tasks)
+                val fabAddTask = findViewById<FloatingActionButton>(R.id.fabAddTask)
+
+                fabAddTask.setOnClickListener {
+                    // Open a new activity or dialog to create a new task
+                    // Example: Start an AddTaskActivity
+                    // After adding a new task to Firebase
+                    taskAdapter.notifyDataSetChanged()
+
+                    val intent = Intent(this@TaskListActivity,AddTaskActivity::class.java)
+                    startActivity(intent)
+                }
 
                 // Handle data changes and update the UI
                 val tasks = mutableListOf<com.example.todolist.Task>() // Replace 'com.example.todolist' with the actual package name of your Task class
