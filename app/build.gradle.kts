@@ -46,6 +46,16 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx:20.2.2")
     implementation ("androidx.recyclerview:recyclerview:1.3.1")
     implementation ("androidx.recyclerview:recyclerview-selection:1.1.0")
+    implementation("com.firebaseui:firebase-ui-firestore:4.1.0")
+    implementation("com.google.firebase:firebase-core:19.0.2")
+
+    implementation ("androidx.appcompat:appcompat:1.4.2")
+    implementation ("com.google.android.material:material:1.6.1")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("com.google.firebase:firebase-auth:21.0.5")
+    implementation ("com.google.firebase:firebase-firestore:24.1.2")
+    implementation ("com.firebaseui:firebase-ui-firestore:8.0.1")
+    implementation("com.google.firebase:firebase-firestore:24.7.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
